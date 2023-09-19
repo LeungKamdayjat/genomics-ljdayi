@@ -1,0 +1,8 @@
+Calling SICER with a control library. Default parameters are explicitly entered for the sake of demonstration.
+
+sicer -t treatment.bed -c control.bed -s hg38 -w 200 -rt 1 -f 150 -egf 0.74 -fdr 0.01 -g 600 -e 1000
+
+
+Calling SICER with a control library. Default parameters are explicitly entered for the sake of demonstration.
+
+sicer -t treatment.bed -c control.bed -s hg38 -w 200 -rt 1 -f 150 -egf 0.74 -fdr 0.01 -g 600 -e 1000
