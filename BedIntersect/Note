@@ -1,0 +1,28 @@
+BedIntersect contains code for calculating overlapped peaks between two ChIP data. 
+Step One: 
+For control files, I use
+
+- HK2-1perinput-rep1_S34.sorted.bam
+
+- UOK121-1perinput-rep1_S30.sorted.bam
+
+- UOK342-IgG-rep1_S31.sorted.bam
+
+for test files (-t), I use following library for TEAD1
+
+- example code: 
+macs2 callpeak -t /Volumes/WD_BLACK/hg38_files/UOK121-TEAD1-rep2_S27.sorted.bam \
+-c /Volumes/WD_BLACK/hg38_files/HK2-1perinput-rep1_S34.sorted.bam \
+/Volumes/WD_BLACK/hg38_files/UOK121-1perinput-rep1_S30.sorted.bam \
+/Volumes/WD_BLACK/hg38_files/UOK342-IgG-rep1_S31.sorted.bam \
+-n UOK121-TEAD1-rep2_S27.sorted > UOK121-TEAD1-rep2_S27.sorted.macs.log \
+2> UOK121-TEAD1-rep2_S27.sorted.macs.err
+
+Step Two:
+Using SICER peak calling to generate broadpeaks for H3K9me3 files.
+Step Three:
+Finding UOK121-TEAD1 and UOK121-H3K9me3 intersected peaks
+finding UOK121-TEAD1 and UOK121-H3K9me3 peaks that are not intersected.
+
+Step Four: 
+visualization: using UOK121-TEAD1 and UOK121-H3K9me3 intersected peaks and subtracted peaks as reference files
